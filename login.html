@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="login.css" />
+    <script src="login.js"></script>
+  </head>
+  <body>
+    <div id="login-form" class="login-block">
+      <h1 class="login-word">LOGIN</h1>
+      <div class="email-block">
+        <img src="login icons/email-icon.png" class="email-icon" /><input
+          type="email"
+          placeholder="EMAIL"
+          class="email-input"
+        />
+      </div>
+      <div class="password-block">
+        <img src="login icons/password-icon.png" class="password-icon" /><input
+          type="password"
+          placeholder="PASSWORD"
+          class="password-input"
+        />
+      </div>
+      <div>
+        <button class="login-button">LOGIN</button>
+      </div>
+      <div>
+        <p class="login-sentence">Or Login With</p>
+        <div class="other-method-button">
+          <button class="fb-button">
+            <img src="login icons/facebook-icon.png" class="fb-icon" />Facebook
+          </button>
+          <button class="google-button">
+            <img src="login icons/google-icon.png" class="google-icon" />Google
+          </button>
+        </div>
+      </div>
+
+      <div class="sign-up">
+        <p class="sign-up-sentence">
+          Don't Have An Account?<a
+            href="#"
+            onclick="SignupPage()"
+            class="sign-up-link"
+            >Sign up</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div id="signup-form" class="signup-block">
+      <h1 class="signup-word">SIGN UP</h1>
+      <p>sign up for continue</p>
+      <div class="email-block2">
+        <img src="login icons/email-icon.png" class="email-icon" /><input
+          type="email"
+          placeholder="EMAIL"
+          class="email-input"
+        />
+      </div>
+      <div class="password-block2">
+        <img src="login icons/password-icon.png" class="password-icon" /><input
+          type="password"
+          placeholder="PASSWORD"
+          class="password-input"
+        />
+      </div>
+      <div>
+        <button class="signup-button">Sign Up</button>
+        <p class="sign-up-login-sentence">
+          Already Have An Account?<a
+            href="#"
+            onclick="LoginPage()"
+            class="sign-up-link"
+            >Login</a
+          >
+        </p>
+      </div>
+      <div class="term-condition">
+        <p class="policy-sentence">
+          By signing up to create an account, you are accepting our terms of
+          service and privacy policy
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #d948a3, #7e57c2, #3f51b5);
+}
+
+.login-block {
+  place-items: center;
+  height: 500px;
+  width: 400px;
+  background-color: white;
+}
+.login-word {
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.email-block,
+.password-block {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  height: 40px;
+  margin-top: 20px;
+  width: 250px;
+}
+.email-icon,
+.password-icon {
+  height: 17px;
+  margin: 10px 10px 10px 10px;
+}
+.email-input {
+  border: none;
+  outline: none;
+  background-color: #e0e0e0;
+  width: 200px;
+}
+.password-input {
+  border: none;
+  outline: none;
+  background-color: #e0e0e0;
+  width: 220px;
+}
+.login-button {
+  background-color: #ea6ebc;
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.login-sentence {
+  display: flex;
+  font-size: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: gray;
+  justify-content: center;
+}
+.fb-icon {
+  height: 17px;
+}
+.google-icon {
+  height: 17px;
+}
+.other-method-button {
+  display: flex;
+  gap: 15px;
+}
+.fb-button {
+  display: flex;
+  height: 25px;
+  width: 110px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: rgb(26, 50, 127);
+  border: 1px solid rgb(176, 174, 174);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.google-button {
+  display: flex;
+  height: 25px;
+  width: 110px;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: rgb(18, 18, 19);
+  border: 1px solid rgb(176, 174, 174);
+  font-size: 15px;
+  cursor: pointer;
+}
+.sign-up {
+  margin-top: 50px;
+}
+.sign-up-sentence {
+  font-size: 13px;
+}
+
+.sign-up-link {
+  color: black;
+}
+
+.sign-up-link:hover {
+  color: darkblue;
+}
+
+.sign-up-link:active {
+  color: red;
+}
+
+.signup-block {
+  display: none;
+  place-items: center;
+  height: 500px;
+  width: 400px;
+  background-color: white;
+}
+.signup-word {
+  margin-top: 60px;
+  margin-bottom: -10px;
+}
+.email-block2 {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  height: 40px;
+  margin-top: 40px;
+  width: 250px;
+}
+.password-block2 {
+  display: flex;
+  align-items: center;
+  background-color: #e0e0e0;
+  height: 40px;
+  margin-top: 20px;
+  width: 250px;
+}
+.signup-button {
+  background-color: #ea6ebc;
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 40px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.term-condition {
+  display: flex;
+  margin-top: 50px;
+  width: 300px;
+}
+.policy-sentence {
+  font-size: small;
+  color: gray;
+  text-align: center;
+}
+.sign-up-login-sentence {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+}
