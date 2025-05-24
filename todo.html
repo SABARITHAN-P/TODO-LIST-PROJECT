@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TODO LIST</title>
+    <link rel="icon" href="login icons/todo.png" type="image/png" />
+    <link rel="stylesheet" href="todo.css" />
+    <script src="todo.js"></script>
+  </head>
+  <body>
+    <div class="welcome">
+      <h1 class="welcome-line">
+        <img src="todo icons/home-icon.png" class="home-icon" />Welcome to ToDo
+        List!
+      </h1>
+    </div>
+    <div class="addtask-block">
+      <div  class="input-wrapper">
+        <input  type="text" placeholder="Add a New Task" >
+        <button class="add-button" onclick="add_task()">Add Task</button>
+      </div>
+    </div>
+    <div  class="display-block">
+    <div class="navigation">
+      <ul class="navigation-bar">
+        <li><button onclick="all_task()">All</button></li>
+        <li><button onclick="active_task()">Active</button></li>
+        <Li><button onclick="completed_task()">completed</button></Li>
+      </ul>
+    </div>
+    <div class="list-of-task">
+    <div class="list-task">
+      <input type="checkbox" class="checkbox">
+      <p class="task">Buy groceries</p>
+      <div class="buttons-in-task">
+        <button class="edit" onclick="edit_task()"><img class="edit-icon" src="todo icons/edit-icon.png"></button>
+      <button class="delete" onclick="delete_task()"><img class="delete-icon" src="todo icons/delete-icon.png" ></button>
+      </div>
+    </div>
+    </div>
+  </div>
+  </body>
+</html>
