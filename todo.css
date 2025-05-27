@@ -1,9 +1,9 @@
 body {
   height: 100vh;
   margin: 0;
+  padding: 0;
   background: linear-gradient(to bottom, #4a90e2, #63d2f7);
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 .welcome-line {
   display: flex;
@@ -83,12 +83,29 @@ li button {
 li button:hover {
   color: rgb(11, 10, 10);
 }
-li button:active {
+li button:focus{
   color: rgb(11, 10, 10);
 }
-/* .list-of-task{
+.list-of-task{
+  height: 300px;
    overflow-y: scroll; 
-} */
+}
+.list-of-task::-webkit-scrollbar {
+  width: 5px;
+}
+
+.list-of-task::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.list-of-task::-webkit-scrollbar-thumb {
+  background: #fafafa;
+}
+
+.list-of-task::-webkit-scrollbar-thumb:hover {
+  background: #d4d3d3;
+}
 .list-task{
   display: flex;
   width: 600px;
