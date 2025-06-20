@@ -27,10 +27,10 @@ body {
   width: 600px;
 }
 
-.input-wrapper input {
+.input-wrapper input.new_task {
   width: 100%;
   height: 80px;
-  padding-right: 180px;
+  padding-right: 310px;
   padding-left: 20px;
   border-radius: 10px;
   border: none;
@@ -51,6 +51,14 @@ body {
   color: white;
   font-size: larger;
   cursor: pointer;
+}
+.input-wrapper input.date {
+  position: absolute;
+  height: 20px;
+  top: 28px;
+  right: 200px;
+  width: 100px;
+
 }
 .display-block {
   display: flex;
@@ -83,12 +91,12 @@ li button {
 li button:hover {
   color: rgb(11, 10, 10);
 }
-li button:focus{
+li button:focus {
   color: rgb(11, 10, 10);
 }
-.list-of-task{
+.list-of-task {
   height: 300px;
-   overflow-y: scroll; 
+  overflow-y: scroll;
 }
 .list-of-task::-webkit-scrollbar {
   width: 5px;
@@ -106,21 +114,21 @@ li button:focus{
 .list-of-task::-webkit-scrollbar-thumb:hover {
   background: #d4d3d3;
 }
-.list-task{
+.list-task {
   display: flex;
   width: 600px;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
   box-sizing: border-box;
 }
- .checkbox{
-height:30px ;
-width:30px ;
-margin-left: 15px;
-margin-right: 15px; 
+.checkbox {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 .checkbox:checked {
-  accent-color: rgb(255, 255, 255); 
+  accent-color: rgb(255, 255, 255);
 }
 
 .checkbox:checked + .task {
@@ -129,30 +137,35 @@ margin-right: 15px;
   opacity: 0.5;
 }
 
-.task{
+.task {
   color: white;
   font-size: x-large;
   margin-left: 10px;
   flex-grow: 1;
 }
-.buttons-in-task{
+.due_date{
+  color: white;
+  font-size: x-large;
+  margin-right:20px; 
+}
+.buttons-in-task {
   display: flex;
   gap: 10px;
 }
-.edit-icon{
+.edit-icon {
   width: 30px;
   height: 30px;
 }
-.delete-icon{
+.delete-icon {
   width: 30px;
   height: 30px;
 }
-.edit{
-border: none;
-background: transparent;
-cursor: pointer;
+.edit {
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
-.delete{
+.delete {
   border: none;
   background: transparent;
   cursor: pointer;

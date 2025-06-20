@@ -4,28 +4,32 @@
     <title>TODO LIST</title>
     <link rel="icon" href="login icons/todo.png" type="image/png" />
     <link rel="stylesheet" href="login.css" />
-    <script src="login.js"></script>
-    <script src="todo.js"></script>
   </head>
   <body>
     <div id="login-form" class="login-block">
       <h1 class="login-word">LOGIN</h1>
       <div class="email-block">
         <img src="login icons/email-icon.png" class="email-icon" /><input
+          id="email_address"
           type="email"
           placeholder="EMAIL"
           class="email-input"
         />
       </div>
       <div class="password-block">
+        
         <img src="login icons/password-icon.png" class="password-icon" /><input
+          id="email_password"
           type="password"
           placeholder="PASSWORD"
           class="password-input"
         />
       </div>
       <div>
-        <button class="login-button" onclick="TodoPage()">LOGIN</button>
+        <button id="LOGIN-button" class="login-button" onclick="TodoPage()">
+          LOGIN
+        </button>
+        <p id="incorrect" class="incorrect_pass">INCORRECT PASSWORD</p>
       </div>
       <div>
         <p class="login-sentence">Or Login With</p>
@@ -86,5 +90,7 @@
         </p>
       </div>
     </div>
+    <script src="login.js"></script>
+
   </body>
 </html>

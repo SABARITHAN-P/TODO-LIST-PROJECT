@@ -7,9 +7,17 @@ document.getElementById("text").addEventListener("keydown", function (event) {
 function add_task() {
   var input = document.getElementById("text");
   var taskText = input.value;
+  var inputDate = document.getElementById("text_date");
+  var taskDate = inputDate.value;
+  if (!taskText) {
+    alert("Please enter a task.");
+    return;
+  }
 
-  if (taskText.trim() === "") return;
-
+  if (!taskDate) {
+    alert("Please select a date.");
+    return;
+  }
   // Create task container
   var taskDiv = document.createElement("div");
   taskDiv.className = "list-task";
@@ -28,6 +36,10 @@ function add_task() {
   taskname.className = "task";
   taskname.textContent = taskText;
 
+  var taskdate = document.createElement("p");
+  taskdate.className = "due_date";
+  taskdate.textContent = taskDate;
+
   // Create buttons container
   var buttonsDiv = document.createElement("div");
   buttonsDiv.className = "buttons-in-task";
@@ -37,7 +49,7 @@ function add_task() {
   editBtn.className = "edit";
   editBtn.innerHTML = '<img class="edit-icon" src="todo icons/edit-icon.png">';
   editBtn.onclick = function () {
-    edit_task(taskname);
+    edit_task(taskname, checkbox);
   };
 
   // Create delete button
@@ -56,6 +68,7 @@ function add_task() {
   // Add all to taskDiv
   taskDiv.appendChild(checkbox);
   taskDiv.appendChild(taskname);
+  taskDiv.appendChild(taskdate);
   taskDiv.appendChild(buttonsDiv);
 
   // Add to list
@@ -69,12 +82,17 @@ function add_task() {
   saveTasksToLocalStorage();
 }
 
-function edit_task(taskname) {
+function edit_task(taskname, checkbox) {
+  if(checkbox.checked){
+    alert("CAN'T EDIT THE COMPLETED TASK");
+  }
+  else{
   var newText = prompt("Edit your task:", taskname.textContent);
   if (newText !== null) {
     taskname.textContent = newText;
     saveTasksToLocalStorage();
   }
+}
 }
 
 function delete_task(taskDiv) {
@@ -119,19 +137,24 @@ function saveTasksToLocalStorage() {
   allTasks.forEach(function (task) {
     var checkbox = task.querySelector(".checkbox");
     var taskname = task.querySelector(".task");
+    var taskdate = task.querySelector(".due_date"); // get date element
     tasks.push({
       text: taskname.textContent,
+      date: taskdate.textContent, // save the date text
       completed: checkbox.checked,
     });
   });
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
+
 function loadTasksFromLocalStorage() {
   var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   tasks.forEach(function (task) {
     var input = document.getElementById("text");
+    var inputDate = document.getElementById("text_date");
     input.value = task.text;
+    inputDate.value = task.date; // set date input value
     add_task();
 
     var list = document.querySelectorAll(".list-task");

@@ -52,10 +52,15 @@ body {
   margin-top: 20px;
   cursor: pointer;
 }
+.incorrect_pass{
+  display: none;
+  color: rgb(238, 95, 52);
+  font-size: small;
+}
 .login-sentence {
   display: flex;
   font-size: 10px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 20px;
   color: gray;
   justify-content: center;

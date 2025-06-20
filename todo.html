@@ -17,7 +17,8 @@
     </div>
     <div class="addtask-block">
       <div class="input-wrapper">
-        <input id="text" type="text" placeholder="Add a New Task" />
+        <input id="text" type="text" placeholder="Add a New Task" class="new_task">
+        <input id="text_date" type="date" class="date">
         <button class="add-button" onclick="add_task()">Add Task</button>
       </div>
     </div>
@@ -32,7 +33,8 @@
       <div class="list-of-task">
         <!-- <div class="list-task">
           <input type="checkbox" class="checkbox" />
-          <p class="task">take bath</p>
+          <p class="task">buy groceries</p>
+          <p class="due_date">10-12-2005</p>
           <div class="buttons-in-task">
             <button class="edit" onclick="edit_task()">
               <img class="edit-icon" src="todo icons/edit-icon.png" />
